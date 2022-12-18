@@ -1,3 +1,6 @@
+.cropper-widget .img-thumbnail {
+    margin-bottom: 20px;
+}
 .new-photo-area {
     border: dashed 2px #EEEEEE;
     box-sizing: content-box;

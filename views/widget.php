@@ -19,7 +19,7 @@ use yii\helpers\Html;
             : $widget->noPhotoImage,
         [
             'style' => 'max-height: ' . $widget->thumbnailHeight . 'px; max-width: ' . $widget->thumbnailWidth . 'px',
-            'class' => 'thumbnail',
+            'class' => 'img-thumbnail',
             'data-no-photo' => $widget->noPhotoImage
         ]
     ); ?>
@@ -28,10 +28,10 @@ use yii\helpers\Html;
         <button type="button" class="btn btn-sm btn-danger delete-photo" aria-label="<?= Yii::t('cropper', 'DELETE_PHOTO');?>">
             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> <?= Yii::t('cropper', 'DELETE_PHOTO');?>
         </button>
-        <button type="button" class="btn btn-sm btn-success crop-photo hidden" aria-label="<?= Yii::t('cropper', 'CROP_PHOTO');?>">
+        <button type="button" class="btn btn-sm btn-success crop-photo d-none" aria-label="<?= Yii::t('cropper', 'CROP_PHOTO');?>">
             <span class="glyphicon glyphicon-scissors" aria-hidden="true"></span> <?= Yii::t('cropper', 'CROP_PHOTO');?>
         </button>
-        <button type="button" class="btn btn-sm btn-info upload-new-photo hidden" aria-label="<?= Yii::t('cropper', 'UPLOAD_ANOTHER_PHOTO');?>">
+        <button type="button" class="btn btn-sm btn-info upload-new-photo d-none" aria-label="<?= Yii::t('cropper', 'UPLOAD_ANOTHER_PHOTO');?>">
             <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> <?= Yii::t('cropper', 'UPLOAD_ANOTHER_PHOTO');?>
         </button>
     </div>
@@ -41,7 +41,7 @@ use yii\helpers\Html;
             <span><?= $widget->label;?></span>
         </div>
     </div>
-    <div class="progress hidden" style="width: <?= $widget->cropAreaWidth; ?>px;">
+    <div class="progress d-none" style="width: <?= $widget->cropAreaWidth; ?>px;">
         <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" style="width: 0%">
             <span class="sr-only"></span>
         </div>

@@ -6,7 +6,7 @@
                 $widget: $widget,
                 $progress: $progress,
                 $progress_bar: $progress.find('.progress-bar'),
-                $thumbnail: $widget.find('.thumbnail'),
+                $thumbnail: $widget.find('.img-thumbnail'),
                 $photo_field: $widget.find('.photo-field'),
                 $upload_new_photo: $widget.find('.upload-new-photo'),
                 $new_photo_area: $widget.find('.new-photo-area'),
@@ -75,7 +75,7 @@
                             return false;
                         },
                         onComplete: function (filename, response) {
-                            cropper.$progress.addClass('hidden');
+                            cropper.$progress.addClass('d-none');
                             if (response['error']) {
                                 cropper.showError(response['error']);
                                 return;
@@ -134,12 +134,12 @@
                 },
                 setProgress: function (value) {
                     if (value) {
-                        cropper.$cropper_buttons.find('button').removeClass('hidden');
-                        cropper.$cropper_label.addClass('hidden');
-                        cropper.$progress.removeClass('hidden');
+                        cropper.$cropper_buttons.find('button').removeClass('d-none');
+                        cropper.$cropper_label.addClass('d-none');
+                        cropper.$progress.removeClass('d-none');
                         cropper.$progress_bar.css({'width': value + '%'});
                     } else {
-                        cropper.$progress.addClass('hidden');
+                        cropper.$progress.addClass('d-none');
                         cropper.$progress_bar.css({'width': 0});
                     }
                 },
