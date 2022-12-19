@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist budyaga/yii2-cropper "*"
+php composer.phar require --prefer-dist kingston-kms/yii2-image-cropper
 ```
 
 or add
 
 ```
-"budyaga/yii2-cropper": "*"
+"kingston-kms/yii2-image-cropper": "*"
 ```
 
 to the require section of your `composer.json` file.
